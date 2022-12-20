@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ar" style="direction: rtl;">
+<html lang="en">
 
 <head>
     <!-- Required meta tags -->
@@ -29,31 +29,27 @@
                     <div class="card p-4 mt-4">
                         <h1 class="text-muted mb-5">
                             
-                            هەنگاوی  <span x-text="step"></span>
+                            Step <span x-text="step"></span>
                         </h1>
                         <!-- 
                         Step 1
                      -->
                         <div x-show="step === 1">
-                            <input x-model='username' class="form-control mt-2" type="text" placeholder="ناوی بەکارهێنەر">
+                            <input x-model='username' class="form-control mt-2" type="text" placeholder="Username">
                         </div>
                         <!-- 
                         Step 2
                      -->
                         <div x-show="step === 2">
-                            <input x-model='password' class="form-control mt-2" type="text" placeholder="وشەی نهێنی">
+                            <input x-model='password' class="form-control mt-2" type="text" placeholder="Password">
                         </div>
                         <!-- 
                         Step 3
                      -->
                         <div x-show="step === 3">
                             <div>
-                                <h1 class="text-center">
-                                    بەخێربێیت
-                                </h1>
-                                <h3 class="text-center">
-                                    تۆ چوویتە ژوورەوە
-                                </h3>
+                                <h1 class="text-center">Welcome</h1>
+                                <h3 class="text-center">You are logged in</h3>
                             </div>
                             <a href="https://www.instagram.com/renas.ghazi/">
                                 <img src="https://img.icons8.com/ios-filled/50/000000/instagram-new.png" width="50px"
@@ -68,10 +64,10 @@
                      -->
                         <div x-show="step <= 2">
                             <button @click="previousStep" class="btn btn-dark btn-sm mt-3" x-show="step > 1">
-                                گەڕانەوە
+                                Back
                             </button>
                             <button @click="nextStep" class="btn btn-primary btn-sm mt-3">
-                                <div x-text='(step === 2 && step) ? "چونه‌ ژووره‌وه‌" : "داهاتوو" '></div>
+                                <div x-text='(step === 2 && step) ? "Login" : "Next" '></div>
                             </button>
                         </div>
                     </div>
@@ -110,7 +106,7 @@
                 if (this.step === 1 && this.username === '') {
                     // return toastify
                     return Toastify({
-                        text: "تکایە هەر ناوێک دابنێ",
+                        text: " Please enter Any Word",
                         duration: 3000,
                         destination: "",
                         newWindow: true,
@@ -129,7 +125,7 @@
                  else if (this.step === 2 && this.password === '') {
                     // return toastify
                     return Toastify({
-                        text: "تکایە هەر وشەی نهێنیەک دابنێ",
+                        text: " Please enter Any Word",
                         duration: 3000,
                         destination: "",
                         newWindow: true,
