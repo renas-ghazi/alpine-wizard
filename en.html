@@ -9,9 +9,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!-- 
-    Hide the content until the page is loaded
-   -->
+    <!-- Hide the content until the page is loaded-->
     <style>
         [x-cloak] {
             display: none;
@@ -31,21 +29,15 @@
                             
                             Step <span x-text="step"></span>
                         </h1>
-                        <!-- 
-                        Step 1
-                     -->
+                        <!--Step 1-->
                         <div x-transition.duration.200ms x-show="step === 1">
                             <input x-model='username' class="form-control mt-2" type="text" placeholder="Username">
                         </div>
-                        <!-- 
-                        Step 2
-                     -->
+                        <!-- Step 2-->
                         <div x-transition.duration.200ms  x-show="step === 2">
                             <input x-model='password' class="form-control mt-2" type="text" placeholder="Password">
                         </div>
-                        <!-- 
-                        Step 3
-                     -->
+                        <!--Step 3-->
                         <div x-transition.duration.200ms  x-show="step === 3">
                             <div>
                                 <h1 class="text-center">Welcome</h1>
@@ -59,9 +51,7 @@
                                 </p>
                             </a>
                         </div>
-                        <!-- 
-                        Buttons
-                     -->
+                        <!--Buttons-->
                         <div x-show="step <= 2">
                             <button @click="previousStep" class="btn btn-dark btn-sm mt-3" x-show="step > 1">
                                 Back
@@ -79,18 +69,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
-    <!-- 
-        toastify js
-     -->
+    <!--toastify js-->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    <!-- 
-        Alpine js
-     -->
+    <!--Alpine js-->
     <script src="//unpkg.com/alpinejs" defer></script>
 
+    <!-- Path: script.js -->
+    <script src="script.js"></script>
 </body>
-<!-- Path: script.js -->
-<script src="script.js"></script>
-
-
 </html>

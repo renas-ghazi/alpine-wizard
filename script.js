@@ -20,7 +20,7 @@ class style{
 
 var styleToast = new style();
 
-    // Alpine js function 
+    // Alpine js function is ussed for wizard en.html
     function wizard() {
         // return data 
         return {
@@ -53,7 +53,7 @@ var styleToast = new style();
     }
 
         
-    // Alpine js function 
+    // Alpine js function  is ussed for wizard index.html
     function wizardKr() {
         // return data 
         return {
@@ -67,12 +67,12 @@ var styleToast = new style();
                 // if step 1 and username is empty
                 if (this.step === 1 && this.username === '') {
                     // return toastify
-                    return styleToast.toast("تکایە هەر ناوێک دابنێ", 3000, "top", true, "#00b09b", "#96c93d");
+                    return styleToast.toast("تکایە هەر ناوێک دابنێ", 3000, "top", true, "red", "red");
                 }
                 // if step 2 and password is empty
                  else if (this.step === 2 && this.password === '') {
                     // return toastify
-                    return styleToast.toast("تکایە هەر ناوێک دابنێ", 3000, "top", true, "#00b09b", "#96c93d");
+                    return styleToast.toast("تکایە هەر ناوێک دابنێ", 3000, "top", true, "red", "orange");
                 }
                 this.step++
             },
