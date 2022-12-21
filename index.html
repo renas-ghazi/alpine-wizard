@@ -34,19 +34,19 @@
                         <!-- 
                         Step 1
                      -->
-                        <div x-show="step === 1">
+                        <div x-transition.duration.200ms  x-show="step === 1">
                             <input x-model='username' class="form-control mt-2" type="text" placeholder="ناوی بەکارهێنەر">
                         </div>
                         <!-- 
                         Step 2
                      -->
-                        <div x-show="step === 2">
+                        <div x-transition.duration.200ms  x-show="step === 2">
                             <input x-model='password' class="form-control mt-2" type="text" placeholder="وشەی نهێنی">
                         </div>
                         <!-- 
                         Step 3
                      -->
-                        <div x-show="step === 3">
+                        <div x-transition.duration.200ms  x-show="step === 3">
                             <div>
                                 <h1 class="text-center">
                                     بەخێربێیت
@@ -66,8 +66,8 @@
                         <!-- 
                         Buttons
                      -->
-                        <div x-show="step <= 2">
-                            <button @click="previousStep" class="btn btn-dark btn-sm mt-3" x-show="step > 1">
+                        <div x-transition.duration.200ms  x-show="step <= 2">
+                            <button @click="previousStep" class="btn btn-dark btn-sm mt-3" x-transition.duration.200ms  x-show="step > 1">
                                 گەڕانەوە
                             </button>
                             <button @click="nextStep" class="btn btn-primary btn-sm mt-3">

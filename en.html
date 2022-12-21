@@ -34,19 +34,19 @@
                         <!-- 
                         Step 1
                      -->
-                        <div x-show="step === 1">
+                        <div x-transition.duration.200ms x-show="step === 1">
                             <input x-model='username' class="form-control mt-2" type="text" placeholder="Username">
                         </div>
                         <!-- 
                         Step 2
                      -->
-                        <div x-show="step === 2">
+                        <div x-transition.duration.200ms  x-show="step === 2">
                             <input x-model='password' class="form-control mt-2" type="text" placeholder="Password">
                         </div>
                         <!-- 
                         Step 3
                      -->
-                        <div x-show="step === 3">
+                        <div x-transition.duration.200ms  x-show="step === 3">
                             <div>
                                 <h1 class="text-center">Welcome</h1>
                                 <h3 class="text-center">You are logged in</h3>
